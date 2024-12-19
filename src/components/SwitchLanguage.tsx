@@ -33,7 +33,7 @@ const SwitchLanguage: FC<SwitchLanguageProps> = () => {
   const items: MenuProps["items"] = data.map((item) => ({
     label: (
       <div
-        className={`flex items-center  ${
+        className={`flex items-center relative z-[9999999]  ${
           activeKey === item.language ? "text-primary-400 " : ""
         }`}
       >
@@ -60,13 +60,14 @@ const SwitchLanguage: FC<SwitchLanguageProps> = () => {
   };
 
   return (
-    <div>
+    <div className="">
       <Dropdown
         menu={menuProps}
         trigger={["click"]}
         onOpenChange={handleDropdownVisibleChange}
+        className=""
       >
-        <Button className="py-5 border border-primary-500">
+        <Button className="py-5 border border-primary-500 ">
           <Space>
             <img
               src={data.find((item) => item.language === activeKey)?.flag}

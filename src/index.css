@@ -50,11 +50,11 @@ code {
   background: white;
 }
 /* slick-world */
-.slick-world .slick-prev:before,
+/* .slick-world .slick-prev:before,
 .slick-world .slick-next:before {
   color: #009383 !important;
   font-size: 32px !important;
-}
+} */
 
 .slick-world .slick-dots li.slick-active button:before {
   opacity: 0.75;
@@ -112,4 +112,59 @@ code {
 .slick-gift .slick-dots li button:before {
   font-size: 14px;
   color: #99d4cd;
+}
+
+/* pagination */
+:where(.css-dev-only-do-not-override-142vneq).ant-pagination
+  .ant-pagination-item {
+  background-color: transparent !important;
+}
+:where(.css-dev-only-do-not-override-142vneq).ant-pagination
+  .ant-pagination-item-active {
+  font-weight: 600;
+  background-color: #009383 !important;
+  border: none;
+  border-radius: 100%;
+}
+:where(.css-dev-only-do-not-override-142vneq).ant-pagination
+  .ant-pagination-item.ant-pagination-item-active
+  a:hover {
+  text-decoration: none;
+  color: white;
+}
+:where(.css-dev-only-do-not-override-142vneq).ant-pagination
+  .ant-pagination-item-active
+  a {
+  color: white;
+}
+:where(.css-dev-only-do-not-override-142vneq).ant-pagination
+  .ant-pagination-options {
+  display: none !important;
+}
+
+:where(.css-dev-only-do-not-override-142vneq).ant-pagination
+  .ant-pagination-prev
+  button,
+:where(.css-dev-only-do-not-override-142vneq).ant-pagination
+  .ant-pagination-next
+  button {
+  color: #009383;
+}
+
+:where(.css-dev-only-do-not-override-qvef2r).ant-btn-variant-outlined,
+:where(.css-dev-only-do-not-override-qvef2r).ant-btn-variant-dashed {
+  background-color: transparent;
+}
+:where(.css-dev-only-do-not-override-qvef2r).ant-btn-variant-outlined:not(
+    :disabled
+  ):not(.ant-btn-disabled):hover,
+:where(.css-dev-only-do-not-override-qvef2r).ant-btn-variant-dashed:not(
+    :disabled
+  ):not(.ant-btn-disabled):hover {
+  background-color: transparent !important;
+}
+
+/* switch language */
+:where(.css-dev-only-do-not-override-142vneq).ant-dropdown {
+  z-index: 9999999;
 }

@@ -1,16 +1,22 @@
 import { FC, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import SwitchLanguage from "../components/SwitchLanguage";
 import { Button, Image } from "antd";
 import NavigationLink from "../components/NavigationLink";
 import { ArrowDown, Cart, Coin, SubNavBar } from "../components/icon";
+import { useAuth } from "../context/userContext";
 
 const Header: FC = () => {
-  const [isLogin, setIsLogin] = useState<boolean>(false);
+  // const [isLogin, setIsLogin] = useState<boolean>(true);
+  const { isLogin } = useAuth();
   const [countCart, setCountCart] = useState<number>(2);
+  const navigate = useNavigate();
+  const hanldeLinkProfile = () => {
+    navigate("/profile");
+  };
   return (
     <div className="fixed top-4 z-[9999] w-full">
-      <div className="w-[95%] mx-auto flex items-center ">
+      <div className="w-[95%] mx-auto flex items-center relative z-[990] ">
         {/* Left Section */}
         <div className="flex items-center">
           <img
@@ -95,7 +101,7 @@ const Header: FC = () => {
                     src="https://s3-alpha-sig.figma.com/img/c568/c92c/ef974240c2e2adb22ca78f595db9527f?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=kpUOPP5g-eXC2YmBCv~LdnJgJQ2ERo4mFj7rMQdWCVZ~FJlSr-wOdZD6QyelVTb1jkc85C3QJVekThIzjeBkxx~KczGGf~CdvRjGleoKvDkaknbskWPqoLENKz28VG2rWFp7Ywbp4Kybn-y-FJ2IgVo3WleyYIXk~gtS9Y54ZoxRTupb8wPe2NvDEhM2W9PFJQ32DJGsqEd8pllb4JkMv~OKlI4mChyySJpJjBjk76vv0tpdyh0lnwDbxBy~0HFaVn8GZNryKKsBkhR9ZjpO31u21wwNfKEYX5~fpzzF15sYHx~4Hs8JOD5lvZMXcZiQ2H-M1xEZtD4gNYPV3u-TOw__"
                     className=" h-11 w-11 rounded-full border-2 border-primary-500"
                   />
-                  <div>
+                  <div className=" cursor-pointer" onClick={hanldeLinkProfile}>
                     <div className="flex items-center gap-3">
                       <p className="text-[#009383] text-xl font-semibold leading-normal">
                         Tuyết Anh
@@ -128,9 +134,9 @@ const Header: FC = () => {
       {/* Background image section */}
       <div className="w-[90%] mx-auto">
         <div className=" ">
-          <div className="relative flex items-center justify-center -mt-[13px]">
-            <SubNavBar />
-            <div className="absolute top-6 flex items-center gap-8">
+          <div className="relative flex items-center justify-center -mt-[1%] xl:-mt-[1%] 2xl:-mt-[1%] lg:-mt-[2%] ">
+            <SubNavBar className="lg:h-[80px]" />
+            <div className="absolute lg:top-7 top-6 md:top-4 flex items-center gap-8">
               <p className="text-[#494949] text-base font-bold uppercase">
                 Cửa hàng
               </p>

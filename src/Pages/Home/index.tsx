@@ -1,37 +1,16 @@
 import { Button, ConfigProvider, Pagination } from "antd";
 import Slider from "react-slick";
-import { ArrowLeft } from "../../components/icon";
 import NavigationLink from "../../components/NavigationLink";
 import Banner from "../../components/Banner";
-import { useEffect, useState } from "react";
-import SampleNextArrow from "../../components/SampleNextArrow";
-import SamplePrevArrow from "../../components/SamplePrevArrow";
-import axios from "axios";
+import { useState } from "react";
 import RankingBoard from "../../Layouts/RankingBoard";
+import {
+  settingGifts,
+  settingHomes,
+  settingWeeks,
+} from "../../constants/sliderSetting";
 
 const HomePage = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    // autoplay: true,
-    autoplaySpeed: 1000,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
-  };
-  const settingGifts = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    // autoplay: true,
-    autoplaySpeed: 1000,
-    nextArrow: <SampleNextArrow type="gift" />,
-    prevArrow: <SamplePrevArrow type="gift" />,
-  };
   const weeks = [
     "Tuần 8 - 09/2023",
     "Tuần 9 - 09/2023",
@@ -43,20 +22,10 @@ const HomePage = () => {
     "Tuần 15 - 09/2023",
   ];
   const [selectedWeek, setSelectedWeek] = useState("Tuần 12 - 09/2023");
-  const settingWeeks = {
-    dots: false,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    arrows: true,
-    nextArrow: <SampleNextArrow type="week" />,
-    prevArrow: <SamplePrevArrow type="week" />,
-  };
 
   return (
     <div>
-      <Slider {...settings} className="slick-home">
+      <Slider {...settingHomes} className="slick-home">
         <div>
           <div
             className="flex items-center min-h-screen"

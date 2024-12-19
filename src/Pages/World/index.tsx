@@ -2,47 +2,15 @@ import { Button, ConfigProvider, Space } from "antd";
 import { FC } from "react";
 import Slider from "react-slick";
 
-import Carousel from "../../components/Carousel";
 import Banner from "../../components/Banner";
+import { settingGifts } from "../../constants/sliderSetting";
+import { useNavigate } from "react-router-dom";
 
-function SampleNextArrow(props: any) {
-  const { className, style, onClick } = props;
-
-  return (
-    <div
-      className={className}
-      style={{
-        ...style,
-        display: "block",
-        background: "red",
-        height: "32px",
-        width: "32px",
-        borderRadius: "50%",
-      }}
-      onClick={onClick}
-    />
-  );
-}
-
-function SamplePrevArrow(props: any) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, display: "block", background: "green" }}
-      onClick={onClick}
-    />
-  );
-}
 const WorldPage: FC = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    // nextArrow: <SampleNextArrow />,
-    // prevArrow: <SamplePrevArrow />,
+  const navigate = useNavigate();
+
+  const handleShowProgramRules = () => {
+    navigate("/ProgramRules");
   };
   return (
     <div>
@@ -50,7 +18,7 @@ const WorldPage: FC = () => {
         <Banner label="QUÀ TẶNG" />
       </section>
       <section className="max-w-5xl mx-auto ">
-        <Slider {...settings} className="slick-world">
+        <Slider {...settingGifts} className="slick-world">
           <div>
             <div className="flex items-center ">
               <div>
@@ -171,7 +139,11 @@ const WorldPage: FC = () => {
                 },
               }}
             >
-              <Button type="primary" className="px-10 py-5 ">
+              <Button
+                type="primary"
+                className="px-10 py-5"
+                onClick={handleShowProgramRules}
+              >
                 <p className="text-white text-lg font-semibold ">Xem thể lệ</p>
               </Button>
             </ConfigProvider>
