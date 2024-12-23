@@ -13,6 +13,7 @@ import StationPage from "../Pages/Station";
 import WorldPage from "../Pages/World";
 import GreecoinHistoryPage from "../Pages/GreecoinHistory";
 import config from "../config";
+import RechargePage from "../Pages/Recharge";
 
 interface RouteConfig {
   path: string;
@@ -48,6 +49,11 @@ const publicRoutes: RouteConfig[] = [
   {
     path: config.contribution,
     component: ContributionPage,
+    layout: DefaultLayout,
+  },
+  {
+    path: config.recharge,
+    component: RechargePage,
     layout: DefaultLayout,
   },
   {

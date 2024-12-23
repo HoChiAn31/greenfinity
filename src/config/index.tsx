@@ -11,6 +11,7 @@ const config = {
   editProfile: "/editProfile",
   donationHistoryPage: "/donationHistoryPage",
   greecoinHistory: "/greecoinHistory",
+  recharge: "/recharge",
   404: "*",
 };
 
