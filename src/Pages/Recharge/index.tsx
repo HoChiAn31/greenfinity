@@ -29,6 +29,7 @@ const options = [
 function RechargePage() {
 	const [currentStep, setCurrentStep] = useState<number>(1);
 	const [activeIndex, setActiveIndex] = useState<number | null>(0);
+	const [isSuccess, setIsSuccess] = useState<boolean>(false);
 	const handleNextStep = () => {
 		if (currentStep < steps.length) {
 			setCurrentStep(currentStep + 1);
@@ -191,28 +192,60 @@ function RechargePage() {
 								Kết quả giao dịch
 							</div>
 						</div>
-						<div>
-							<div className='flex items-center justify-center'>
-								<img src='https://i.imgur.com/Xa4zar7.png' alt='' />
-							</div>
-							<p className='text-3xl font-bold text-[#FBC000]'>100.000đ</p>
-							<p className='text-base font-bold text-primary-500'>Giao dịch thành công</p>
-							<p className='text-sm text-gray-500'>Thời gian thanh toán: 14:05 - 28/11/2023</p>
-						</div>
-						<div className='mt-5 flex flex-col gap-4'>
-							<div
-								onClick={handleNextStep}
-								className='inline-flex h-11 cursor-pointer items-center justify-center gap-2 self-stretch overflow-hidden rounded-lg bg-[#009383] px-6 py-2.5 shadow-[0px_0px_6px_0px_rgba(231,233,242,1.00)]'
-							>
-								<div className='text-lg font-medium text-white'>Tiếp tục giao dịch</div>
-							</div>
-							<div
-								onClick={handleNextStep}
-								className='inline-flex h-11 cursor-pointer items-center justify-center gap-2 self-stretch overflow-hidden rounded-lg border border-primary-500 px-6 py-2.5 text-primary-500 shadow-[0px_0px_6px_0px_rgba(231,233,242,1.00)]'
-							>
-								<div className='text-lg font-medium'>Xem số GreeCoin hiện có dịch</div>
-							</div>
-						</div>
+						{isSuccess ? (
+							<>
+								<div>
+									<div className='flex items-center justify-center'>
+										<img src='https://i.imgur.com/Xa4zar7.png' alt='' />
+									</div>
+									<p className='text-3xl font-bold text-[#FBC000]'>100.000đ</p>
+									<p className='text-base font-bold text-primary-500'>Giao dịch thành công</p>
+									<p className='text-sm text-gray-500'>Thời gian thanh toán: 14:05 - 28/11/2023</p>
+								</div>
+								<div className='mt-5 flex flex-col gap-4'>
+									<div
+										onClick={handleNextStep}
+										className='inline-flex h-11 cursor-pointer items-center justify-center gap-2 self-stretch overflow-hidden rounded-lg bg-[#009383] px-6 py-2.5 shadow-[0px_0px_6px_0px_rgba(231,233,242,1.00)]'
+									>
+										<div className='text-lg font-medium text-white'>Tiếp tục giao dịch</div>
+									</div>
+									<div
+										onClick={handleNextStep}
+										className='inline-flex h-11 cursor-pointer items-center justify-center gap-2 self-stretch overflow-hidden rounded-lg border border-primary-500 px-6 py-2.5 text-primary-500 shadow-[0px_0px_6px_0px_rgba(231,233,242,1.00)]'
+									>
+										<div className='text-lg font-medium'>Xem số GreeCoin hiện có</div>
+									</div>
+								</div>
+							</>
+						) : (
+							<>
+								<div>
+									<div className='flex items-center justify-center'>
+										<img
+											src='https://firebasestorage.googleapis.com/v0/b/adept-now-409715.appspot.com/o/greenfinity%2FFrame%20627760.png?alt=media&token=b9de5b10-dbb8-4265-8a5a-fb507d4153be'
+											alt=''
+										/>
+									</div>
+									<p className='text-3xl font-bold text-[#FBC000]'>100.000đ</p>
+									<p className='text-base font-bold text-primary-500'>Giao dịch không thành công</p>
+									<p className='text-sm text-gray-500'>Thời gian thanh toán: 14:05 - 28/11/2023</p>
+								</div>
+								<div className='mt-5 flex flex-col gap-4'>
+									<div
+										onClick={handleNextStep}
+										className='inline-flex h-11 cursor-pointer items-center justify-center gap-2 self-stretch overflow-hidden rounded-lg bg-[#009383] px-6 py-2.5 shadow-[0px_0px_6px_0px_rgba(231,233,242,1.00)]'
+									>
+										<div className='text-lg font-medium text-white'>Liên hệ hỗ trợ</div>
+									</div>
+									<div
+										onClick={handleNextStep}
+										className='inline-flex h-11 cursor-pointer items-center justify-center gap-2 self-stretch overflow-hidden rounded-lg border border-primary-500 px-6 py-2.5 text-primary-500 shadow-[0px_0px_6px_0px_rgba(231,233,242,1.00)]'
+									>
+										<div className='text-lg font-medium'>Xem số GreeCoin hiện có</div>
+									</div>
+								</div>
+							</>
+						)}
 					</div>
 				)}
 			</div>

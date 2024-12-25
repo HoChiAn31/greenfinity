@@ -15,7 +15,7 @@ const Header: FC = () => {
 		navigate('/profile');
 	};
 	return (
-		<div className='fixed top-4 z-[9999] w-full'>
+		<div className='fixed top-4 z-[999] w-full'>
 			<div className='relative z-[990] mx-auto flex w-[95%] items-center'>
 				{/* Left Section */}
 				<div className='flex items-center'>
@@ -120,7 +120,7 @@ const Header: FC = () => {
 					<div className='relative -mt-[1%] flex items-center justify-center lg:-mt-[2%] xl:-mt-[1%] 2xl:-mt-[1%]'>
 						<SubNavBar className='lg:h-[80px]' />
 						<div className='absolute top-6 flex items-center gap-8 md:top-4 lg:top-7'>
-							<p className='text-base font-bold uppercase text-[#494949]'>Cửa hàng</p>
+							<NavigationLink to='/store' content='Cửa hàng' className='uppercase' style='nav' />
 							<p className='text-base font-bold uppercase text-[#494949]'>Câu chuyện</p>
 						</div>
 					</div>
