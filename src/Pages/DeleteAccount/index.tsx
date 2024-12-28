@@ -4,9 +4,11 @@ import { useState } from 'react';
 import { useTheme } from 'antd-style';
 import { Color } from 'antd/es/color-picker';
 import { EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons';
+import { useNavigate } from 'react-router-dom';
 
 const DeleteAccountPage = () => {
-	const [isModalOpen, setIsModalOpen] = useState(true);
+	const [isModalOpen, setIsModalOpen] = useState(false);
+	const navigate = useNavigate();
 	const showModal = () => {
 		setIsModalOpen(true);
 	};
@@ -32,8 +34,11 @@ const DeleteAccountPage = () => {
 			gap: '20px',
 		},
 	};
+	const handleBack = () => {
+		navigate('/profile');
+	};
 	return (
-		<div className='mx-auto mb-16 max-w-[952px] rounded-2xl bg-white px-20 py-8 shadow'>
+		<div className='mx-auto my-16 max-w-[952px] rounded-2xl bg-white px-20 py-8 shadow'>
 			<div className='flex flex-col items-center justify-center gap-4'>
 				<div className='inline-flex h-12 items-center justify-center gap-2.5 rounded-lg bg-[#FF4444] px-5'>
 					<div className='text-center text-[28px] font-bold uppercase leading-[33.60px] text-white'>
@@ -105,7 +110,10 @@ const DeleteAccountPage = () => {
 				</div>
 			</div>
 			<div className='mt-6 flex gap-2'>
-				<Button className='w-full rounded-lg bg-gray-200 px-4 py-6 text-lg text-gray-700'>
+				<Button
+					className='w-full rounded-lg bg-gray-200 px-4 py-6 text-lg text-gray-700'
+					onClick={handleBack}
+				>
 					Hủy bỏ
 				</Button>
 				<Button

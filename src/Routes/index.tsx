@@ -18,6 +18,8 @@ import ForumPage from '../Pages/Forum';
 import DeleteAccountPage from '../Pages/DeleteAccount';
 import StorePage from '../Pages/Store';
 import StoreDetailPage from '../Pages/StoreDetail';
+import NaiPage from '../Pages/Nai';
+import StoryPage from '../Pages/Story';
 
 interface RouteConfig {
 	path: string;
@@ -78,6 +80,16 @@ const publicRoutes: RouteConfig[] = [
 	{
 		path: config.storeDetail,
 		component: StoreDetailPage,
+		layout: DefaultLayout,
+	},
+	{
+		path: config.nai,
+		component: NaiPage,
+		layout: DefaultLayout,
+	},
+	{
+		path: config.story,
+		component: StoryPage,
 		layout: DefaultLayout,
 	},
 	{

@@ -77,7 +77,17 @@ code {
 .slick-home .slick-dots {
 	bottom: 20px;
 }
-
+.slick-story .slick-dots {
+	bottom: -5%;
+}
+.slick-story .slick-dots li.slick-active button:before {
+	opacity: 0.75;
+	color: #009383 !important;
+}
+.slick-story .slick-dots li button:before {
+	font-size: 14px;
+	color: #99d4cd;
+}
 .slick-home .slick-dots li {
 	background-color: white;
 	border: 3px solid white;

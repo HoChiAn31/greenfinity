@@ -16,6 +16,8 @@ const config = {
 	deleteAccount: '/deleteAccount',
 	store: '/store',
 	storeDetail: '/storeDetail',
+	nai: '/nai',
+	story: '/story',
 	404: '*',
 };
 

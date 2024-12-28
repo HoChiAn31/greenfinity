@@ -28,12 +28,12 @@ const Post = () => {
 						className='h-auto w-full rounded-lg'
 					/>
 					<img
-						src='https://www.zoo-berlin.de/fileadmin/_processed_/f/d/csm_Wasserschwein___Jungtiere_1__ee9a02713e.jpg'
+						src='https://preview.redd.it/capybaras-are-highly-social-animals-forming-family-units-of-v0-71zs4jyy4rtb1.jpg?width=640&crop=smart&auto=webp&s=f7ce24f1c215a367b9ef8024a6a04c534b2dccf4'
 						alt='Capybara 2'
 						className='h-auto w-full rounded-lg'
 					/>
 					<img
-						src='https://www.zoo-berlin.de/fileadmin/_processed_/6/b/csm_Wasserschwein___Jungtiere_2_e45688089b.jpg'
+						src='https://wildexpedition.com/wp-content/uploads/2023/09/capybara-pantanal-wildlife-2.jpg.webp'
 						alt='Capybara 3'
 						className='h-auto w-full rounded-lg'
 					/>

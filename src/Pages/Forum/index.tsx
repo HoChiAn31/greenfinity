@@ -4,8 +4,7 @@ import Post from '../../components/Post';
 
 const ForumPage = () => {
 	return (
-		<div className='mx-auto max-w-[1071px]'>
-			{' '}
+		<div className='mx-auto max-w-[1071px] py-5'>
 			<div className='text-center text-[64px] font-bold uppercase leading-[76.80px] text-[#009383]'>
 				Diễn đàn
 			</div>

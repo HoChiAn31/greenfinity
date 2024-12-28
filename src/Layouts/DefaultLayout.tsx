@@ -25,7 +25,9 @@ const DefaultLayout: FC<DefaultLayoutProps> = ({ children }) => {
 			}`}
 		>
 			<Header />
-			<main className={`flex-grow ${name === '/' ? '' : 'pt-[160px]'}`}>{children}</main>
+			<main className={`flex-grow ${name === '/' ? '' : 'pt-[100px]'}`}>
+				<div className='my-10'>{children}</div>
+			</main>
 			<Footer />
 		</div>
 	);
