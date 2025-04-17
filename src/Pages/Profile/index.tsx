@@ -34,7 +34,7 @@ const ProfilePage = () => {
 						<div className='py-3'>
 							<NavigationLink
 								iconLeft={<Edit />}
-								style='button'
+								type='button'
 								content=' Chỉnh sửa thông tin'
 								to='/editProfile'
 								variant='outline'
@@ -79,21 +79,21 @@ const ProfilePage = () => {
 									iconLeft={<HandCoin />}
 									content='Lịch sử quyên góp'
 									to='/donationHistoryPage'
-									style='button'
+									type='button'
 								/>
 
 								<NavigationLink
 									iconLeft={<ClockClockwise />}
 									content='Lịch sử tích điểm'
 									to='/greecoinHistory'
-									style='button'
+									type='button'
 								/>
 							</div>
 							<NavigationLink
 								iconLeft={<ToteSimple />}
 								content='Lịch sản phẩm của bạn'
 								to='/donationHistoryPage'
-								style='button'
+								type='button'
 								className='justify-center'
 							/>
 							<ConfigProvider

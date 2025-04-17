@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Minus, Plus } from '../components/icon';
+import { Minus, Plus, Search } from '../components/icon';
 import FilterSection from '../components/FilterSection';
+import { Input } from 'antd';
 
 const FilterProduct = () => {
 	const [isCategoryOpen, setIsCategoryOpen] = useState(false);
@@ -47,6 +48,7 @@ const FilterProduct = () => {
 	return (
 		<div className='max-w-[332px] space-y-4 rounded-2xl border border-primary-500 bg-white px-6 py-10 shadow-[0px_2px_19.700000762939453px_0px_rgba(0,0,0,0.07)]'>
 			<h3 className='text-gray-400- text-2xl font-bold'>Lọc sản phẩm</h3>
+			<Input suffix={<Search />} className='h-12 w-[292px]' placeholder='Tìm kiếm' />
 			{/* Category Section */}
 			<FilterSection
 				title='Phân loại'

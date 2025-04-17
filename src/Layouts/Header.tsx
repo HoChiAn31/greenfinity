@@ -39,11 +39,11 @@ const Header: FC = () => {
 					{/* Navigation Links */}
 					<nav className='flex space-x-6'>
 						{/* <NavigationLink to={`/`} content="TRANG CHỦ" style="nav" /> */}
-						<NavigationLink to={`/station`} content='TRẠM GREEZ' style='nav' />
-						<NavigationLink to={`/world`} content='THẾ GIỚI TÁI SINH' style='nav' />
-						<NavigationLink to={`/contribution`} content='THANG ĐÓNG GÓP' style='nav' />
-						<NavigationLink to={`/map`} content='BẢN ĐỒ' style='nav' />
-						<NavigationLink to={`/minigame`} content='MINI GAME' style='nav' />
+						<NavigationLink to={`/station`} content='TRẠM GREEZ' type='nav' />
+						<NavigationLink to={`/world`} content='THẾ GIỚI TÁI SINH' type='nav' />
+						<NavigationLink to={`/contribution`} content='THANG ĐÓNG GÓP' type='nav' />
+						<NavigationLink to={`/map`} content='BẢN ĐỒ' type='nav' />
+						<NavigationLink to={`/minigame`} content='MINI GAME' type='nav' />
 					</nav>
 					{/* Button */}
 					<div className='mr-4 flex items-center gap-3'>
@@ -52,7 +52,7 @@ const Header: FC = () => {
 								<SwitchLanguage />
 								<NavigationLink
 									to='/login'
-									style='button'
+									type='button'
 									content={<p className="font-['Inter'] text-base font-bold">Đăng nhập</p>}
 									iconLeft={
 										<svg
@@ -120,8 +120,13 @@ const Header: FC = () => {
 					<div className='relative -mt-[1%] flex items-center justify-center lg:-mt-[2%] xl:-mt-[1%] 2xl:-mt-[1%]'>
 						<SubNavBar className='lg:h-[80px]' />
 						<div className='absolute top-6 flex items-center gap-8 md:top-4 lg:top-7'>
-							<NavigationLink to='/store' content='Cửa hàng' className='uppercase' style='nav' />
-							<p className='text-base font-bold uppercase text-[#494949]'>Câu chuyện</p>
+							<NavigationLink to='/store' content='Cửa hàng' className='uppercase' type='subNav' />
+							<NavigationLink
+								to='/story'
+								content='Câu chuyện'
+								className='uppercase'
+								type='subNav'
+							/>
 						</div>
 					</div>
 				</div>

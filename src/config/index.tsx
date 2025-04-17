@@ -18,6 +18,13 @@ const config = {
 	storeDetail: '/storeDetail',
 	nai: '/nai',
 	story: '/story',
+	cart: '/cart',
+	listOne: '/listOne',
+	collection: '/collection',
+	checkOrder: '/checkOrder',
+	profileV2: '/profileV2',
+	order: '/profileV2/orders',
+	myOrder: '/profileV2/myOrder',
 	404: '*',
 };
 

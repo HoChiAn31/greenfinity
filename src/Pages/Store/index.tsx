@@ -47,7 +47,7 @@ const StorePage = () => {
 
 								<NavigationLink
 									content={<p className='text-lg font-semibold text-white'>Tìm hiểu thêm</p>}
-									style='button'
+									type='button'
 									to='/station'
 									className='border border-white'
 								/>
@@ -82,7 +82,7 @@ const StorePage = () => {
 
 							<NavigationLink
 								content={<p className='text-lg font-semibold text-white'>Tìm hiểu thêm</p>}
-								style='button'
+								type='button'
 								to='/station'
 								className='border border-white'
 							/>
@@ -116,7 +116,7 @@ const StorePage = () => {
 							<div className='flex w-full items-center justify-center'>
 								<NavigationLink
 									content={<p className='text-lg font-semibold text-white'>Tìm hiểu thêm</p>}
-									style='button'
+									type='button'
 									to='/station'
 									className='border border-white'
 								/>

@@ -20,6 +20,13 @@ import StorePage from '../Pages/Store';
 import StoreDetailPage from '../Pages/StoreDetail';
 import NaiPage from '../Pages/Nai';
 import StoryPage from '../Pages/Story';
+import CartPage from '../Pages/Cart';
+import ListOnePage from '../Pages/ListOne';
+import CollectionPage from '../Pages/Collection';
+import CheckOrderPage from '../Pages/CheckOrder';
+import ProfileV2Page from '../Pages/ProfileV2';
+import OrderPage from '../Pages/ProfileV2/Orders';
+import MyOrderPage from '../Pages/ProfileV2/MyOrder';
 
 interface RouteConfig {
 	path: string;
@@ -90,6 +97,41 @@ const publicRoutes: RouteConfig[] = [
 	{
 		path: config.story,
 		component: StoryPage,
+		layout: DefaultLayout,
+	},
+	{
+		path: config.cart,
+		component: CartPage,
+		layout: DefaultLayout,
+	},
+	{
+		path: config.listOne,
+		component: ListOnePage,
+		layout: DefaultLayout,
+	},
+	{
+		path: config.collection,
+		component: CollectionPage,
+		layout: DefaultLayout,
+	},
+	{
+		path: config.checkOrder,
+		component: CheckOrderPage,
+		layout: DefaultLayout,
+	},
+	{
+		path: config.profileV2,
+		component: ProfileV2Page,
+		layout: DefaultLayout,
+	},
+	{
+		path: config.order,
+		component: OrderPage,
+		layout: DefaultLayout,
+	},
+	{
+		path: config.myOrder,
+		component: MyOrderPage,
 		layout: DefaultLayout,
 	},
 	{

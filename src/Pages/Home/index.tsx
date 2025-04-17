@@ -48,7 +48,7 @@ const HomePage = () => {
 
 							<NavigationLink
 								content={<p className='text-lg font-semibold text-white'>Tìm hiểu thêm</p>}
-								style='button'
+								type='button'
 								to='/station'
 								className='border border-white'
 							/>
@@ -82,7 +82,7 @@ const HomePage = () => {
 							<div className='flex w-full items-center justify-center'>
 								<NavigationLink
 									content={<p className='text-lg font-semibold text-white'>Tìm hiểu thêm</p>}
-									style='button'
+									type='button'
 									to='/station'
 									className='border border-white'
 								/>
@@ -119,7 +119,7 @@ const HomePage = () => {
 
 							<NavigationLink
 								content={<p className='text-lg font-semibold text-white'>Tìm hiểu thêm</p>}
-								style='button'
+								type='button'
 								to='/station'
 								className='border border-white'
 							/>
@@ -231,7 +231,7 @@ const HomePage = () => {
 				</div>
 				<NavigationLink
 					to='/login'
-					style='button'
+					type='button'
 					content={<p className='text-base font-bold'>Đăng nhập</p>}
 					bgColor='bg-[#15bdd6]'
 				/>

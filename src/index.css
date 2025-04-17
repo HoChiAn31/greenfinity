@@ -193,3 +193,25 @@ code {
 .title:where(.css-dev-only-do-not-override-142vneq).ant-modal .ant-modal-title {
 	color: #ff4444;
 }
+
+/* custom scrolbar */
+/* width */
+/* ::-webkit-scrollbar {
+	width: 10px;
+} */
+
+/* Track */
+/* ::-webkit-scrollbar-track {
+	background: #f1f1f1;
+} */
+
+/* Handle */
+/* ::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 5px;
+} */
+
+/* Handle on hover */
+/* ::-webkit-scrollbar-thumb:hover {
+	background: #555;
+} */

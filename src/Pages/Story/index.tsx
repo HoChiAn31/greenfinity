@@ -7,13 +7,13 @@ import { Button } from 'antd';
 
 function StoryPage() {
 	return (
-		<div>
+		<div className='-my-10'>
 			<div className=' '>
 				<Slider {...settingStory} className='slick-story'>
 					<div>
 						<div>
 							<div className='mx-auto max-w-[1200px]'>
-								<div className='-mt-20 flex items-center gap-20'>
+								<div className='flex items-center gap-20'>
 									<div className='flex flex-col items-start text-left'>
 										<p className='text-4xl font-semibold text-primary-500'>Coaster Set</p>
 										<div className='text-5xl font-extrabold uppercase leading-[56px] text-primary-500'>
@@ -34,7 +34,7 @@ function StoryPage() {
 
 										<NavigationLink
 											content={<p className='text-lg font-semibold text-white'>Xem chi tiết</p>}
-											style='button'
+											type='button'
 											to='/station'
 											className='border border-white'
 										/>
@@ -74,7 +74,7 @@ function StoryPage() {
 
 										<NavigationLink
 											content={<p className='text-lg font-semibold text-white'>Xem chi tiết</p>}
-											style='button'
+											type='button'
 											to='/station'
 											className='border border-white'
 										/>
@@ -114,7 +114,7 @@ function StoryPage() {
 
 										<NavigationLink
 											content={<p className='text-lg font-semibold text-white'>Xem chi tiết</p>}
-											style='button'
+											type='button'
 											to='/station'
 											className='border border-white'
 										/>
@@ -142,19 +142,26 @@ function StoryPage() {
 					<ProductOne />
 				</div>
 				<div className='my-5 flex items-center justify-center'>
-					<Button className='border border-primary-500 px-40 py-4'>Xem tất cả</Button>
+					<NavigationLink
+						type='button'
+						to='/listOne'
+						variant='outline'
+						content={<p>Xem tất cả</p>}
+						className='bg-white'
+					/>
 				</div>
 			</section>
 			<section>
 				<div
 					style={{
 						backgroundImage: `url("https://i.imgur.com/gjjJoUR.png")`,
-						backgroundSize: '100%',
-						backgroundPosition: '',
+						backgroundSize: 'cover', // Kéo dài ảnh để bao phủ toàn bộ
+						backgroundPosition: '', // Căn giữa ảnh
 						backgroundRepeat: 'no-repeat',
 						// backgroundAttachment: 'fixed',
+						// height: '100vh',
 					}}
-					className='w-full'
+					className='h-[120vh] w-full 2xl:h-[100vh]'
 				>
 					<Banner label='BỘ SƯU TẬP' />
 					<div className='mx-auto flex max-w-[1400px] items-start'>
@@ -276,10 +283,14 @@ function StoryPage() {
 							<img src='https://i.imgur.com/Bf4uhpM.png' className='h-[588px]' alt='' />
 						</div>
 					</div>
-					<div className='flex items-center justify-center pb-20 pt-5'>
-						<Button className='px-32 py-4'>
-							<div className='text-lg font-medium text-[#494949]'>Xem tất cả</div>
-						</Button>
+					<div className='flex items-center justify-center pt-5'>
+						<NavigationLink
+							type='button'
+							to='/collection'
+							variant='outline'
+							content={<p>Xem tất cả</p>}
+							className='bg-white'
+						/>
 					</div>
 				</div>
 			</section>

@@ -1,30 +1,26 @@
-import { FC, createContext, useContext, useState } from "react";
+import { FC, createContext, useContext, useState } from 'react';
 
 interface AuthContextType {
-  isLogin: boolean;
-  setIsLogin: (value: boolean) => void;
+	isLogin: boolean;
+	setIsLogin: (value: boolean) => void;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 interface AuthProviderProps {
-  children: React.ReactNode;
+	children: React.ReactNode;
 }
 
 export const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
-  const [isLogin, setIsLogin] = useState<boolean>(false);
+	const [isLogin, setIsLogin] = useState<boolean>(true);
 
-  return (
-    <AuthContext.Provider value={{ isLogin, setIsLogin }}>
-      {children}
-    </AuthContext.Provider>
-  );
+	return <AuthContext.Provider value={{ isLogin, setIsLogin }}>{children}</AuthContext.Provider>;
 };
 
 export const useAuth = () => {
-  const context = useContext(AuthContext);
-  if (context === undefined) {
-    throw new Error("No AuthProvider found");
-  }
-  return context;
+	const context = useContext(AuthContext);
+	if (context === undefined) {
+		throw new Error('No AuthProvider found');
+	}
+	return context;
 };
